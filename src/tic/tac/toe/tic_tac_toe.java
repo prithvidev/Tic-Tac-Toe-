@@ -223,6 +223,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         w = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(260, 120));
         setUndecorated(true);
 
         jPanel3.setBackground(new java.awt.Color(153, 153, 153));
@@ -551,6 +552,11 @@ public class tic_tac_toe extends javax.swing.JFrame {
 
         jButton12.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton12.setText("CLEAR");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -749,6 +755,30 @@ public class tic_tac_toe extends javax.swing.JFrame {
         player();
         winning();
     }//GEN-LAST:event_b9ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        b1.setText(null);
+        b2.setText(null);
+        b3.setText(null);
+        b4.setText(null);
+        b5.setText(null);
+        b6.setText(null);
+        b7.setText(null);
+        b8.setText(null);
+        b9.setText(null);
+        
+        b1.setBackground(Color.LIGHT_GRAY);
+        b2.setBackground(Color.LIGHT_GRAY);
+        b3.setBackground(Color.LIGHT_GRAY);
+        b4.setBackground(Color.LIGHT_GRAY);
+        b5.setBackground(Color.LIGHT_GRAY);
+        b6.setBackground(Color.LIGHT_GRAY);
+        b7.setBackground(Color.LIGHT_GRAY);
+        b8.setBackground(Color.LIGHT_GRAY);
+        b9.setBackground(Color.LIGHT_GRAY);
+        
+        
+    }//GEN-LAST:event_jButton12ActionPerformed
 
     /**
      * @param args the command line arguments
