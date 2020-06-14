@@ -5,6 +5,7 @@
  */
 package tic.tac.toe;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
@@ -13,13 +14,26 @@ import javax.swing.JOptionPane;
  */
 public class tic_tac_toe extends javax.swing.JFrame {
 
-    /**
-     * Creates new form tic_tac_toe
-     */
+    private String startgame = "X";
+    int xcount = 0;
+    int ocount = 0;
+    
     public tic_tac_toe() {
         initComponents();
     }
-
+    public void gamescore(){
+        X.setText(String.valueOf(xcount));
+        O.setText(String.valueOf(ocount));
+    }
+    
+    private void player(){
+        if(startgame.equalsIgnoreCase("X")){
+            startgame = "O";
+        }
+        else{
+            startgame = "X";
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -36,31 +50,31 @@ public class tic_tac_toe extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        b1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
+        b2 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
+        b3 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         X = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
+        b4 = new javax.swing.JButton();
         jPanel12 = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
+        b5 = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
-        jButton8 = new javax.swing.JButton();
+        b6 = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
         O = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
-        jButton9 = new javax.swing.JButton();
+        b7 = new javax.swing.JButton();
         jPanel15 = new javax.swing.JPanel();
-        jButton10 = new javax.swing.JButton();
+        b8 = new javax.swing.JButton();
         jPanel16 = new javax.swing.JPanel();
-        jButton11 = new javax.swing.JButton();
+        b9 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jButton12 = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
@@ -102,52 +116,73 @@ public class tic_tac_toe extends javax.swing.JFrame {
         jPanel1.setLayout(new java.awt.GridLayout(3, 5, 2, 2));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
 
-        jButton3.setText("jButton3");
+        b1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        b1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        b1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(b1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+            .addComponent(b1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel2);
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
 
-        jButton4.setText("jButton4");
+        b2.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        b2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(b2, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+            .addComponent(b2, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel4);
 
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel5.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
 
-        jButton5.setText("jButton5");
+        b3.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        b3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        b3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(b3, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+            .addComponent(b3, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel5);
@@ -190,52 +225,73 @@ public class tic_tac_toe extends javax.swing.JFrame {
         jPanel1.add(jPanel7);
 
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel11.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
 
-        jButton6.setText("jButton6");
+        b4.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        b4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        b4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(b4, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+            .addComponent(b4, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel11);
 
         jPanel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel12.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
 
-        jButton7.setText("jButton7");
+        b5.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        b5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        b5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(b5, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+            .addComponent(b5, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel12);
 
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel9.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
 
-        jButton8.setText("jButton8");
+        b6.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        b6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        b6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(b6, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+            .addComponent(b6, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel9);
@@ -278,52 +334,73 @@ public class tic_tac_toe extends javax.swing.JFrame {
         jPanel1.add(jPanel13);
 
         jPanel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel14.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
 
-        jButton9.setText("jButton9");
+        b7.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        b7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        b7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b7ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(b7, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+            .addComponent(b7, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel14);
 
         jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel15.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
 
-        jButton10.setText("jButton10");
+        b8.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        b8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        b8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b8ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(b8, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+            .addComponent(b8, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel15);
 
         jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel16.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
 
-        jButton11.setText("jButton11");
+        b9.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        b9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        b9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b9ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(b9, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+            .addComponent(b9, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel16);
@@ -405,6 +482,123 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
+        b1.setText(startgame);
+        
+        if(startgame.equalsIgnoreCase("X")){
+            b1.setForeground(Color.blue);
+        }
+        else{
+            b1.setForeground(Color.GREEN);
+        }
+        
+        player();
+    }//GEN-LAST:event_b1ActionPerformed
+
+    private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
+        b2.setText(startgame);
+        
+        if(startgame.equalsIgnoreCase("X")){
+            b2.setForeground(Color.blue);
+        }
+        else{
+            b2.setForeground(Color.GREEN);
+        }
+        
+        player();
+    }//GEN-LAST:event_b2ActionPerformed
+
+    private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
+        b3.setText(startgame);
+        
+        if(startgame.equalsIgnoreCase("X")){
+            b3.setForeground(Color.blue);
+        }
+        else{
+            b3.setForeground(Color.GREEN);
+        }
+        
+        player();
+    }//GEN-LAST:event_b3ActionPerformed
+
+    private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
+       b4.setText(startgame);
+        
+        if(startgame.equalsIgnoreCase("X")){
+            b4.setForeground(Color.blue);
+        }
+        else{
+            b4.setForeground(Color.GREEN);
+        }
+        
+        player();
+    }//GEN-LAST:event_b4ActionPerformed
+
+    private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
+        b5.setText(startgame);
+        
+        if(startgame.equalsIgnoreCase("X")){
+            b5.setForeground(Color.blue);
+        }
+        else{
+            b5.setForeground(Color.GREEN);
+        }
+        
+        player();
+    }//GEN-LAST:event_b5ActionPerformed
+
+    private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
+        b6.setText(startgame);
+        
+        if(startgame.equalsIgnoreCase("X")){
+            b6.setForeground(Color.blue);
+        }
+        else{
+            b6.setForeground(Color.GREEN);
+        }
+        
+        player();
+    }//GEN-LAST:event_b6ActionPerformed
+
+    private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
+       b7.setText(startgame);
+        
+        if(startgame.equalsIgnoreCase("X")){
+            b7.setForeground(Color.blue);
+        }
+        else{
+            b7.setForeground(Color.GREEN);
+        }
+        
+        player();
+    }//GEN-LAST:event_b7ActionPerformed
+
+    private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
+        b8.setText(startgame);
+        
+        if(startgame.equalsIgnoreCase("X")){
+            b8.setForeground(Color.blue);
+        }
+        else{
+            b8.setForeground(Color.GREEN);
+        }
+        
+        player();
+    }//GEN-LAST:event_b8ActionPerformed
+
+    private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
+        b9.setText(startgame);
+        
+        if(startgame.equalsIgnoreCase("X")){
+            b9.setForeground(Color.blue);
+        }
+        else{
+            b9.setForeground(Color.GREEN);
+        }
+        
+        player();
+    }//GEN-LAST:event_b9ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -443,18 +637,18 @@ public class tic_tac_toe extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel O;
     private javax.swing.JLabel X;
+    private javax.swing.JButton b1;
+    private javax.swing.JButton b2;
+    private javax.swing.JButton b3;
+    private javax.swing.JButton b4;
+    private javax.swing.JButton b5;
+    private javax.swing.JButton b6;
+    private javax.swing.JButton b7;
+    private javax.swing.JButton b8;
+    private javax.swing.JButton b9;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
