@@ -34,6 +34,148 @@ public class tic_tac_toe extends javax.swing.JFrame {
             startgame = "X";
         }
     }
+    
+    private void winning(){
+    
+        String one = b1.getText();
+        String two = b2.getText();
+        String three = b3.getText();
+        String four = b4.getText();
+        String five = b5.getText();
+        String six = b6.getText();
+        String seven = b7.getText();
+        String eight = b8.getText();
+        String nine = b9.getText();
+        
+        if(one == "X" && two == "X" && three == "X"){
+            JOptionPane.showMessageDialog(this,"PLAYER X WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            xcount++;
+            gamescore();
+            b1.setBackground(Color.ORANGE);
+            b2.setBackground(Color.ORANGE);
+            b3.setBackground(Color.ORANGE);
+        }
+        else if(one == "O" && two == "O" && three == "O"){
+            JOptionPane.showMessageDialog(this,"PLAYER O WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            ocount++;
+            gamescore();
+            b1.setBackground(Color.ORANGE);
+            b2.setBackground(Color.ORANGE);
+            b3.setBackground(Color.ORANGE);
+        }
+        else if(four == "O" && five == "O" && six== "O"){
+            JOptionPane.showMessageDialog(this,"PLAYER O WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            ocount++;
+            gamescore();
+            b4.setBackground(Color.ORANGE);
+            b5.setBackground(Color.ORANGE);
+            b6.setBackground(Color.ORANGE);
+        }
+        else if(four == "X" && five == "X" && six == "X"){
+            JOptionPane.showMessageDialog(this,"PLAYER X WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            xcount++;
+            gamescore();
+            b4.setBackground(Color.ORANGE);
+            b5.setBackground(Color.ORANGE);
+            b6.setBackground(Color.ORANGE);
+        }
+        else if(seven == "X" && eight == "X" && nine == "X"){
+            JOptionPane.showMessageDialog(this,"PLAYER X WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            xcount++;
+            gamescore();
+            b7.setBackground(Color.ORANGE);
+            b8.setBackground(Color.ORANGE);
+            b9.setBackground(Color.ORANGE);
+        }
+        else if(seven == "O" && eight == "O" && nine == "O"){
+            JOptionPane.showMessageDialog(this,"PLAYER O WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            ocount++;
+            gamescore();
+            b7.setBackground(Color.ORANGE);
+            b8.setBackground(Color.ORANGE);
+            b9.setBackground(Color.ORANGE);
+        }
+        else if(one == "X" && five == "X" && nine == "X"){
+            JOptionPane.showMessageDialog(this,"PLAYER X WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            xcount++;
+            gamescore();
+            b1.setBackground(Color.ORANGE);
+            b5.setBackground(Color.ORANGE);
+            b9.setBackground(Color.ORANGE);
+        }
+        else if(one == "O" && five == "O" && nine == "O"){
+            JOptionPane.showMessageDialog(this,"PLAYER O WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            ocount++;
+            gamescore();
+            b1.setBackground(Color.ORANGE);
+            b5.setBackground(Color.ORANGE);
+            b9.setBackground(Color.ORANGE);
+        }
+        else if(one == "X" && four == "X" && seven == "X"){
+            JOptionPane.showMessageDialog(this,"PLAYER X WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            xcount++;
+            gamescore();
+            b1.setBackground(Color.ORANGE);
+            b4.setBackground(Color.ORANGE);
+            b7.setBackground(Color.ORANGE);
+        }
+        else if(one == "X" && four == "X" && seven == "X"){
+            JOptionPane.showMessageDialog(this,"PLAYER O WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            ocount++;
+            gamescore();
+            b1.setBackground(Color.ORANGE);
+            b4.setBackground(Color.ORANGE);
+            b7.setBackground(Color.ORANGE);
+        }
+        else if(two == "X" && five == "X" && eight == "X"){
+            JOptionPane.showMessageDialog(this,"PLAYER X WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            xcount++;
+            gamescore();
+            b2.setBackground(Color.ORANGE);
+            b5.setBackground(Color.ORANGE);
+            b8.setBackground(Color.ORANGE);
+        }
+        else if(two == "O" && five == "O" && eight == "O"){
+            JOptionPane.showMessageDialog(this,"PLAYER O WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            ocount++;
+            gamescore();
+            b2.setBackground(Color.ORANGE);
+            b5.setBackground(Color.ORANGE);
+            b8.setBackground(Color.ORANGE);
+        }
+        else if(three == "X" && five == "X" && seven == "X"){
+            JOptionPane.showMessageDialog(this,"PLAYER X WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            xcount++;
+            gamescore();
+            b3.setBackground(Color.ORANGE);
+            b5.setBackground(Color.ORANGE);
+            b7.setBackground(Color.ORANGE);
+        }
+        else if(three == "O" && five == "O" && seven == "O"){
+            JOptionPane.showMessageDialog(this,"PLAYER O WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            ocount++;
+            gamescore();
+            b3.setBackground(Color.ORANGE);
+            b5.setBackground(Color.ORANGE);
+            b7.setBackground(Color.ORANGE);
+        }
+        else if(three == "X" && six == "X" && nine == "X"){
+            JOptionPane.showMessageDialog(this,"PLAYER X WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            xcount++;
+            gamescore();
+            b3.setBackground(Color.ORANGE);
+            b6.setBackground(Color.ORANGE);
+            b9.setBackground(Color.ORANGE);
+        }
+        else if(three == "O" && six == "O" && nine == "O"){
+            JOptionPane.showMessageDialog(this,"PLAYER O WINS","Tic Tac Toe",JOptionPane.INFORMATION_MESSAGE);
+            ocount++;
+            gamescore();
+            b3.setBackground(Color.ORANGE);
+            b6.setBackground(Color.ORANGE);
+            b9.setBackground(Color.ORANGE);
+        }
+   }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -493,6 +635,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         player();
+        winning();
     }//GEN-LAST:event_b1ActionPerformed
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
@@ -506,6 +649,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         player();
+        winning();
     }//GEN-LAST:event_b2ActionPerformed
 
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
@@ -519,6 +663,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         player();
+        winning();
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
@@ -532,6 +677,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         player();
+        winning();
     }//GEN-LAST:event_b4ActionPerformed
 
     private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
@@ -545,6 +691,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         player();
+        winning();
     }//GEN-LAST:event_b5ActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
@@ -558,6 +705,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         player();
+        winning();
     }//GEN-LAST:event_b6ActionPerformed
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
@@ -571,6 +719,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         player();
+        winning();
     }//GEN-LAST:event_b7ActionPerformed
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
@@ -584,6 +733,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         player();
+        winning();
     }//GEN-LAST:event_b8ActionPerformed
 
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
@@ -597,6 +747,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         player();
+        winning();
     }//GEN-LAST:event_b9ActionPerformed
 
     /**
